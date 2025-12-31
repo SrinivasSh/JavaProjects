@@ -4,7 +4,7 @@ public class DBConstants {
 	
 	public static final String URL="jdbc:mysql://localhost:3306/employemanagementweb";
 	public static final String USERNAME="root";
-	public static final String PASSWORD="Srinivas@1998";
+	public static final String PASSWORD="";
 	public static final String INSERT_USER="insert into users values(?,?)";
 	public static final String VALIDATE_USER="select * from users where email=?";
 	public static final String GET_ALL_EMPLOYEES="select * from employee";
