@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <bean id="emp" class="com.Employee" autowire="constructor">
+		<constructor-arg index="0" value="1" ></constructor-arg>
+		<constructor-arg index="1" value="Srinivas" ></constructor-arg>
+		<constructor-arg index="2">
+			<map>
+				<entry key="Lang1" value="Java" />
+				<entry key="Lang2" value="Python" />
+				<entry key="Lang3" value="DSA" />
+				<entry key="Cloud" value="AWS" />
+				<entry key="Tools" value="DevOps" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="address" class="com.Address">
+		<constructor-arg  value="7" ></constructor-arg>
+		<constructor-arg  value="Bondilipuram" ></constructor-arg>
+		<constructor-arg  value="Beside Ram Mandir" ></constructor-arg>
+	</bean>
+ -->
+ 
+ <bean id="employee" class="com.Employee" scope="prototype"></bean>
+ 	<context:annotation-config />
+ 	<bean id="emp" class="com.Employee" >
+		 <property name="id" value="1" ></property>
+		<property name="name" value="Srinivas" ></property>
+		<property name="skills">
+			<map>
+				<entry key="Lang1" value="Java" />
+				<entry key="Lang2" value="Python" />
+				<entry key="Lang3" value="DSA" />
+				<entry key="Cloud" value="AWS" />
+				<entry key="Tools" value="DevOps" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="address" class="com.Address">
+		<property  name="streetNo" value="7" ></property>
+		<property  name="streetName" value="Bondilipuram" ></property>
+		<property  name="landMark" value="Beside Ram Mandir" ></property>
+	</bean>
+
+
+
+</beans>
