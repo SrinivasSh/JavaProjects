@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<body>
+
+	<!-- Used for data from java to html -->
+	<h1>
+		Hi <span th:text="${name}"></span> your password is <span
+			th:text="${password}"></span>
+	</h1>
+
+	<a th:href="@{/submit}">Submit</a>
+
+
+	<form th:action="formObject" th:object="${user}" method="post">
+		Name: <input type="text" th:field="*{name}"></br>
+		</br> Password:<input type="password" th:field="*{password}"></br>
+		</br> <input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>
